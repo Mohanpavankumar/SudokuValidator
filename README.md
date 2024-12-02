@@ -37,5 +37,5 @@ This project is a Python-based application to validate Sudoku puzzles. It includ
 
 | Output Screen                |
 |---------------------------- |
-| (Sudoku_Output.png) |
+| ![Output Screen](Sudoku_Output.png) |
 
