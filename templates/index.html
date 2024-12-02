@@ -73,38 +73,55 @@
     </div>
 
     <script>
+        // Add an event listener to the form with the ID "uploadForm"
+        // This listener will intercept the form submission
         document.getElementById("uploadForm").addEventListener("submit", function(event) {
+            // Prevent the default form submission behavior
             event.preventDefault();
             var form = event.target;
+    
+            // Create a FormData object from the form's data
             var formData = new FormData(form);
-
+    
+            // Send the form data to the server using the Fetch API
             fetch("/", {
-                method: "POST",
-                body: formData
+                method: "POST", 
+                body: formData  
             })
-            .then(response => response.json())
+            .then(response => response.json()) // Parse the JSON response from the server
             .then(data => {
+                // Call the showMessage function to display the server's response
                 showMessage(data.message, data.status);
             })
             .catch(error => {
+                // Log any errors that occur during the fetch operation
                 console.error("Error:", error);
             });
         });
-
+        // Function to display a message to the user
         function showMessage(message, status) {
+            // Get the element where messages will be displayed
             var messageContainer = document.getElementById("messageContainer");
+    
+            // Create a new div element to hold the message
             var messageElement = document.createElement("div");
-            messageElement.textContent = message;
-            messageElement.classList.add("message");
+            messageElement.textContent = message; // Set the message text
+            messageElement.classList.add("message"); // Add a base class for styling
+    
+            // Add a class based on the status to style the message appropriately
             if (status === "success") {
                 messageElement.classList.add("success");
             } else if (status === "error") {
                 messageElement.classList.add("error");
             }
+    
+            // Clear any existing messages from the container
             messageContainer.innerHTML = "";
+    
+            // Add the new message element to the container
             messageContainer.appendChild(messageElement);
         }
-    </script>
+    </script>    
 </body>
 </html>
 
