@@ -22,6 +22,7 @@ def home():
             else:
                 return jsonify({"message": "Failed to read Sudoku puzzle from file.", "status": "error"})
     return render_template('index.html')
-
+    
+/* Main Function */
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
