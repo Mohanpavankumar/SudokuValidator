@@ -2,12 +2,10 @@
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 import unittest
 from src.input_processing import is_valid_input, parse_input
 
 class TestInputProcessing(unittest.TestCase):
-
     def test_valid_input(self):
         board = [
             [5, 3, '.', '.', 7, '.', '.', '.', '.'],
