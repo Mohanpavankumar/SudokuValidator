@@ -9,6 +9,7 @@ This project is a Python-based application to validate Sudoku puzzles. It includ
 
 ## Install Python dependencies (if required):
 - The project uses the standard library and does not require additional dependencies. Ensure Python 3.x is installed.
+- Version Check : python -v
 
 ## Example file content :
     ```
@@ -33,7 +34,7 @@ This project is a Python-based application to validate Sudoku puzzles. It includ
 
 2. Web Interface: python web_app.py
 
-## **Screenshots**
+## **Screenshot**
 
 | Output Screen                |
 |---------------------------- |
