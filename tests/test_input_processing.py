@@ -1,9 +1,9 @@
 # test_input_processing.py
-import sys
+import sys;
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-import unittest
-from src.input_processing import is_valid_input, parse_input
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')));
+import unittest;
+from src.input_processing import is_valid_input, parse_input;
 
 class TestInputProcessing(unittest.TestCase):
     def test_valid_input(self):
@@ -18,7 +18,7 @@ class TestInputProcessing(unittest.TestCase):
             ['.', '.', '.', 4, 1, 9, '.', '.', 5],
             ['.', '.', '.', '.', 8, '.', '.', 7, 9]
         ]
-        self.assertTrue(is_valid_input(board))
+        self.assertTrue(is_valid_input(board));
 
     def test_invalid_input(self):
         invalid_board = [
@@ -32,7 +32,7 @@ class TestInputProcessing(unittest.TestCase):
             ['.', '.', '.', 4, 1, 9, '.', '.', 5],
             ['.', '.', '.', '.', 8, '.', '.', 7, 9]
         ]
-        self.assertFalse(is_valid_input(invalid_board))
+        self.assertFalse(is_valid_input(invalid_board));
 
     def test_parse_input(self):
         input_str = (
@@ -57,7 +57,7 @@ class TestInputProcessing(unittest.TestCase):
             ['.', '.', '.', 4, 1, 9, '.', '.', 5],
             ['.', '.', '.', '.', 8, '.', '.', 7, 9]
         ]
-        self.assertEqual(parse_input(input_str), expected_board)
+        self.assertEqual(parse_input(input_str), expected_board);
 
 if __name__ == '__main__':
     unittest.main()
