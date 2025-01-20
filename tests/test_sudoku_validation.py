@@ -1,8 +1,8 @@
-import sys
+import sys;
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-import unittest
-from src.sudoku_validation import is_valid_sudoku
+import unittest;
+from src.sudoku_validation import is_valid_sudoku;
 
 class TestSudokuValidation(unittest.TestCase):
     def test_valid_sudoku(self):
@@ -18,7 +18,7 @@ class TestSudokuValidation(unittest.TestCase):
             [2, 8, 7, 4, 1, 9, 6, 3, 5],
             [3, 4, 5, 2, 8, 6, 1, 7, 9]
         ]
-        self.assertTrue(is_valid_sudoku(valid_board))
+        self.assertTrue(is_valid_sudoku(valid_board));
 
     def test_invalid_sudoku(self):
         # Invalid Sudoku board with duplicate in row
@@ -33,7 +33,7 @@ class TestSudokuValidation(unittest.TestCase):
             [2, 8, 7, 4, 1, 9, 6, 3, 5],
             [3, 4, 5, 2, 8, 6, 1, 7, 7]  # Duplicate 7 in last row
         ]
-        self.assertFalse(is_valid_sudoku(invalid_row_board))
+        self.assertFalse(is_valid_sudoku(invalid_row_board));
 
         # Invalid Sudoku board with duplicate in column
         invalid_column_board = [
@@ -49,7 +49,7 @@ class TestSudokuValidation(unittest.TestCase):
         ]
         # Duplicate 8 in the last column
         invalid_column_board[8][8] = 8
-        self.assertFalse(is_valid_sudoku(invalid_column_board))
+        self.assertFalse(is_valid_sudoku(invalid_column_board));
 
         # Invalid Sudoku board with duplicate in subgrid
         invalid_subgrid_board = [
@@ -65,8 +65,8 @@ class TestSudokuValidation(unittest.TestCase):
         ]
         # Duplicate 9 in subgrid starting from (3, 3)
         invalid_subgrid_board[3][3] = 9
-        self.assertFalse(is_valid_sudoku(invalid_subgrid_board))
+        self.assertFalse(is_valid_sudoku(invalid_subgrid_board));
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main();
