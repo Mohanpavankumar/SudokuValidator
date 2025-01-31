@@ -1,13 +1,13 @@
-import tkinter as tk
-from tkinter import filedialog, messagebox
-from input_processing import read_sudoku_from_file
-from sudoku_validation import is_valid_sudoku
+import tkinter as tk;
+from tkinter import filedialog, messagebox;
+from input_processing import read_sudoku_from_file;
+from sudoku_validation import is_valid_sudoku;
 
 class SudokuValidatorApp:
     def __init__(self, master):
-        self.master = master
-        self.master.title("Sudoku Validator")
-        self.master.geometry("300x200")
+        self.master = master;
+        self.master.title("Sudoku Validator");
+        self.master.geometry("300x200");
 
         self.file_label = tk.Label(self.master, text="Select Sudoku file:")
         self.file_label.pack()
