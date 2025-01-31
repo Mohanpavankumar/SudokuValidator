@@ -12,7 +12,6 @@ This project is a Python-based application to validate Sudoku puzzles. It includ
 - Version Check : python -v
 
 ## Example file content :
-    ```
     5.3....7.
     6..195...
     .98....6.
@@ -22,7 +21,6 @@ This project is a Python-based application to validate Sudoku puzzles. It includ
     .6....28.
     ...419..5
     ....8..79
-    ```
 1. The application will validate the puzzle and display one of the following messages:
     - "Sudoku puzzle is valid!" for a valid puzzle.
     - "Sudoku puzzle is not valid." for an invalid puzzle.
