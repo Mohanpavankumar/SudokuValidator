@@ -78,10 +78,8 @@
             // Prevent the default form submission behavior
             event.preventDefault();
             var form = event.target;
-    
             // Create a FormData object from the form's data
             var formData = new FormData(form);
-    
             // Send the form data to the server using the Fetch API
             fetch("/", {
                 method: "POST", 
